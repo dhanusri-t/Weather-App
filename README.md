@@ -16,4 +16,4 @@ A simple weather application built using **HTML, CSS, and JavaScript** that fetc
 ## ⚙️ Setup
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/dhanusri-t/weather-app.git
