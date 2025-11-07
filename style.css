@@ -4,9 +4,11 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body{
     background: #222;
 }
+
 .card{
     width: 90%;
     max-width: 470px;
@@ -16,13 +18,16 @@ body{
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    overflow: hidden;  /* ✅ prevents children from spilling out */
 }
 
+/* ✅ SEARCH BAR FIXED */
 .search{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    flex-wrap: nowrap;     /* ✅ prevents pushing button to next line */
 }
 
 .search input{
@@ -35,7 +40,8 @@ body{
     border-radius: 30px;
     flex: 1;
     font-size: 18px;
-    min-width: 0; /* ✅ prevents overflow */
+    min-width: 0;          /* ✅ IMPORTANT: prevents overflow */
+    box-sizing: border-box; /* ✅ keeps padding inside width */
 }
 
 .search button{
@@ -45,66 +51,82 @@ body{
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    flex-shrink: 0;  /* ✅ prevents oval shape */
-    aspect-ratio: 1 / 1; /* ✅ keeps perfect circle */
+    flex-shrink: 0;         /* ✅ never shrink the circle */
+    aspect-ratio: 1/1;      /* ✅ makes it always circular */
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search button img{
     width: 32px;
 }
 
+/* WEATHER SECTION */
+
 .weather-icon{
     width: 170px;
     margin-top: 30px;
 }
+
 .weather h1{
     font-size: 80px;
     font-weight: 500;
 }
+
 .weather h2{
     font-size: 40px;
     font-weight: 400;
     margin-top: -10px;
 }
+
 .details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;    /* ✅ looks nicer on small screens */
 }
+
 .col {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  margin-right: 40px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
+
 .col img {
-  width: 50px;
-  margin-right: 10px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
 }
+
 .humidity,
 .wind {
-  font-size: 20px;
-  font-weight:bold;
-  margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
+
 .label {
-  font-size: 14px;
-  color: #ccc;
-  margin: 0;
-  text-align: left;
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    text-align: left;
 }
+
 .weather{
     display: none;
 }
+
 .error{
     text-align: left;
     margin-left: 14px;
