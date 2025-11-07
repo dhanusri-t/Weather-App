@@ -18,17 +18,16 @@ body{
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
-    overflow: hidden;  /* ✅ prevents children from spilling out */
+    overflow: hidden;  
 }
 
-/* ✅ SEARCH BAR FIXED */
+
 .search{
     width: 100%;
     display: flex;
     align-items: center;
     gap: 12px;
-    flex-wrap: nowrap;     /* ✅ prevents pushing button to next line */
-}
+    flex-wrap: nowrap;    
 
 .search input{
     border: 0;
@@ -40,9 +39,8 @@ body{
     border-radius: 30px;
     flex: 1;
     font-size: 18px;
-    min-width: 0;          /* ✅ IMPORTANT: prevents overflow */
-    box-sizing: border-box; /* ✅ keeps padding inside width */
-}
+    min-width: 0;         
+    box-sizing: border-box; 
 
 .search button{
     border: 0;
@@ -51,8 +49,8 @@ body{
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    flex-shrink: 0;         /* ✅ never shrink the circle */
-    aspect-ratio: 1/1;      /* ✅ makes it always circular */
+    flex-shrink: 0;         
+    aspect-ratio: 1/1;      
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -62,8 +60,6 @@ body{
 .search button img{
     width: 32px;
 }
-
-/* WEATHER SECTION */
 
 .weather-icon{
     width: 170px;
@@ -83,24 +79,20 @@ body{
 
 .details {
     display: flex;
+    justify-content: space-between; 
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
-    flex-wrap: wrap;    /* ✅ looks nicer on small screens */
+    margin-top: 40px;
+    width: 100%;
 }
 
 .col {
     display: flex;
     align-items: center;
-    text-align: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    gap: 12px;
 }
 
 .col img {
-    width: 50px;
-    margin-right: 10px;
+    width: 40px;
 }
 
 .text {
