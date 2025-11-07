@@ -13,18 +13,18 @@ body{
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
     margin: 100px auto 80px;
-    
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
 }
+
 .search{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    gap: 16px;
 }
+
 .search input{
     border: 0;
     outline: 0;
@@ -34,9 +34,10 @@ body{
     height: 60px;
     border-radius: 30px;
     flex: 1;
-    margin-right: 16px;
     font-size: 18px;
+    min-width: 0; /* ✅ prevents overflow */
 }
+
 .search button{
     border: 0;
     outline: 0;
@@ -44,12 +45,15 @@ body{
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    flex-shrink: 0;  /* ✅ prevents oval shape */
+    aspect-ratio: 1 / 1; /* ✅ keeps perfect circle */
     cursor: pointer;
-    aspect-ratio: 1/1;
 }
+
 .search button img{
     width: 32px;
 }
+
 .weather-icon{
     width: 170px;
     margin-top: 30px;
@@ -74,14 +78,13 @@ body{
   display: flex;
   align-items: center;
   text-align: left;
+  margin-right: 40px;
 }
 .col img {
   width: 50px;
   margin-right: 10px;
 }
-.col + .col {
-  margin-left: 20px; /* space before the wind section */
-}
+
 .text {
   display: flex;
   flex-direction: column;
