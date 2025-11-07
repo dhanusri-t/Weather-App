@@ -45,6 +45,7 @@ body{
     width: 60px;
     height: 60px;
     cursor: pointer;
+    aspect-ratio: 1/1;
 }
 .search button img{
     width: 32px;
@@ -79,7 +80,7 @@ body{
   margin-right: 10px;
 }
 .col + .col {
-  margin-left: 60px; /* space before the wind section */
+  margin-left: 20px; /* space before the wind section */
 }
 .text {
   display: flex;
